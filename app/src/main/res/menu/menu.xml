@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <item
+        android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        android:orderInCategory="100"
+        android:onClick="onSettingsMenuClick"
+        app:showAsAction="never" />
+
+    <group android:checkableBehavior="single">
+
+    <item
+        android:id="@+id/action_cat1"
+        android:orderInCategory="100"
+        android:title="@string/action_cat_male"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_cat2"
+        android:orderInCategory="100"
+        android:title="@string/action_cat_female"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_cat3"
+        android:orderInCategory="100"
+        android:title="@string/action_kitten"
+        app:showAsAction="never"/>
+    </group>
+
+    <item
+        android:id="@+id/action_favorite"
+        android:icon="@drawable/ic_eatme"
+        android:title="@string/action_favorite"
+        app:showAsAction="ifRoom">
+
+    <menu>
+
+        <item android:id="@+id/create_new"
+            android:title="@string/create_new" />
+        <item android:id="@+id/open"
+            android:title="@string/open" />
+    </menu>
+
+    </item>
+
+    <item
+        android:id="@+id/action"
+        android:icon="@drawable/ic_toward"
+        android:title=""
+        app:showAsAction="ifRoom"
+        android:onClick="menuClick"/>
+</menu>
+
+

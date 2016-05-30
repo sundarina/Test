@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Test</string>
+    <string name="action_settings">SettingsХуетинс</string>
+    <string name="action_cat_male">АдскийКот</string>
+    <string name="action_cat_female">АдскаяКошка</string>
+    <string name="action_kitten">АдскийКотёнок</string>
+    <string name="catfood"> СОЖРИ МЕНЯ!!!!!</string>
+    <string name="action_favorite"></string>
+    <string name="create_new">create_new</string>
+    <string name="open">open</string>
+    <string-array name="avengers_Name">
+        <item>Кеп</item>
+        <item>Железный человек</item>
+        <item>Халк</item>
+        <item>Виджен</item>
+        <item>Алая ведьма</item>
+        <item>Черная вдова</item>
+        <item>Соколиный глаз</item>
+        <item>Человек-муравей</item>
+        <item>Человек-паук</item>
+        <item>Зимний солдат</item>
+        <item>Железный патриот</item>
+        <item>Черная пантера</item>
+    </string-array>
+</resources>
