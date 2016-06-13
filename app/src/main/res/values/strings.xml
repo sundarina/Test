@@ -8,6 +8,8 @@
     <string name="action_favorite"></string>
     <string name="create_new">create_new</string>
     <string name="open">open</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
     <string-array name="avengers_Name">
         <item>Кеп</item>
         <item>Железный человек</item>
