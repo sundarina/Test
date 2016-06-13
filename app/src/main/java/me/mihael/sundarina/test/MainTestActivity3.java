@@ -11,10 +11,13 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainTestActivity3 extends AppCompatActivity {
 
@@ -22,10 +25,8 @@ public class MainTestActivity3 extends AppCompatActivity {
 
 
     String[] avengersName;
-
-    final int MENU_COLOR_RED = 1;
-    final int MENU_COLOR_GREEN = 2;
-    final int MENU_COLOR_BLUE = 3;
+    List<String> avengersName2; //создаем лист, так как мы не можем удалять элдементы массива.
+    ArrayAdapter<String> adapter;
     TextView textView3;
 
     @Override
@@ -34,21 +35,27 @@ public class MainTestActivity3 extends AppCompatActivity {
         setContentView(R.layout.activity_main_test3);
 
         avengersName = getResources().getStringArray(R.array.avengers_Name);
+        avengersName2 = new ArrayList<>();
+        for(int i=0;i<avengersName.length;i++) {   //записываем из массива в лист
+            avengersName2.add(avengersName[i]);
+        }
 
-        ListView listView = (ListView)findViewById(R.id.listView);
-        TextView textViev3 = (TextView)findViewById(R.id.textView3);
+        ListView listView = (ListView) findViewById(R.id.listView);
+        TextView textViev3 = (TextView) findViewById(R.id.textView3);
 
         registerForContextMenu(listView);
         registerForContextMenu(textViev3);
 
-    // используем адаптер данных
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
-                android.R.layout.simple_list_item_1, avengersName);
+        // используем адаптер данных
+        //adapter = new ArrayAdapter<>(this,
+         //       android.R.layout.simple_list_item_1, avengersName);
+
+        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, avengersName2);
         listView.setAdapter(adapter);
     }
 
 
-        public boolean onCreateOptionsMenu(Menu menu) {
+    public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu, menu);
         return true;
@@ -75,10 +82,10 @@ public class MainTestActivity3 extends AppCompatActivity {
                 infoTextView.setText("Вы еще не сьели кошку!");
                 return true;
             case R.id.action_cat3:
-                 infoTextView.setText("Вы еще не сьели котёнка!");
+                infoTextView.setText("Вы еще не сьели котёнка!");
                 return true;
             case R.id.action_favorite:
-                 infoTextView.setText("!!!");
+                infoTextView.setText("!!!");
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -93,14 +100,40 @@ public class MainTestActivity3 extends AppCompatActivity {
 
     public void onCreateContextMenu(ContextMenu menu, View v,
                                     ContextMenu.ContextMenuInfo menuInfo) {
-           switch (v.getId()) {
-            case R.id.textView3:
-                menu.add(0, MENU_COLOR_RED, 0, "Red");
-                menu.add(0, MENU_COLOR_GREEN, 0, "Green");
-                menu.add(0, MENU_COLOR_BLUE, 0, "Blue");
-                break;
-           }
+
+        super.onCreateContextMenu(menu, v, menuInfo);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.contex_menu, menu);
     }
 
+    @Override
+
+    public boolean onContextItemSelected(MenuItem item) {
+        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+        avengersName = getResources().getStringArray(R.array.avengers_Name);
+        switch (item.getItemId()) {
+            case R.id.edit:
+                // editNote(info.id);
+                Toast.makeText(this, "You have chosen the " + getResources().getString(R.string.edit) +
+                                " context menu option for " + avengersName[(int) info.id],
+                        Toast.LENGTH_SHORT).show();
+                return true;
+
+            case R.id.delete:
+                //deleteNote(info.id);
+                adapter.remove(adapter.getItem(info.position));
+
+                Toast.makeText(this, "You have chosen the " + getResources().getString(R.string.delete) +
+                                " context menu option for " + avengersName[(int) info.id],
+                        Toast.LENGTH_SHORT).show();
+
+                return true;
+
+            default:
+                return super.onContextItemSelected(item);
+        }
+    }
 
 }
+
+
