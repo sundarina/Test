@@ -91,7 +91,7 @@ public class MainTestActivity3 extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
+    //кнопка перехода назад (установлено в xml)
 
     public void menuClick(MenuItem item) {
         Intent scr4 = new Intent(this, MainTestActivity4.class);

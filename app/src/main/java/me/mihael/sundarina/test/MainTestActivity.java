@@ -70,8 +70,8 @@ public class MainTestActivity extends AppCompatActivity {
     }
     // у атрибута пункта меню Settings установлено значение android:onClick="onSettingsMenuClick"
     public void onSettingsMenuClick(MenuItem item) {
-        TextView infoTextView = (TextView) findViewById(R.id.textView);
-        infoTextView.setText("Вы выбрали пункт SettingsХуетинс, лучше бы сьели кота");
+       // TextView infoTextView = (TextView) findViewById(R.id.textView);
+        //infoTextView.setText("Вы выбрали пункт SettingsХуетинс, лучше бы сьели кота");
 
         Toast toast = Toast.makeText(getApplicationContext(),
                 "Пора уничтожить весь выводок котов!", Toast.LENGTH_SHORT);
@@ -100,7 +100,7 @@ public class MainTestActivity extends AppCompatActivity {
         toast3.show();
     }
 
-
+//копка вперед
     public void menuClick(MenuItem item){
         Intent scr2 = new Intent(this, MainTestActivity2.class);
         startActivity(scr2);

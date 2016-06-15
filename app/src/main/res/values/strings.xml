@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">Test</string>
-    <string name="action_settings">SettingsХуетинс</string>
-    <string name="action_cat_male">АдскийКот</string>
-    <string name="action_cat_female">АдскаяКошка</string>
-    <string name="action_kitten">АдскийКотёнок</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_cat_male">1</string>
+    <string name="action_cat_female">2</string>
+    <string name="action_kitten">3</string>
     <string name="catfood"> СОЖРИ МЕНЯ!!!!!</string>
     <string name="action_favorite"></string>
     <string name="create_new">create_new</string>

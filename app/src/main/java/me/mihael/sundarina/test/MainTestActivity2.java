@@ -63,6 +63,7 @@ public class MainTestActivity2 extends AppCompatActivity {
         //toast.setGravity(Gravity.TOP, 0, 0);
         toast.show();
     }
+//кнопка перехода назад (установлено в xml)
 
     public void menuClick(MenuItem item) {
         Intent scr3 = new Intent(this, MainTestActivity3.class);

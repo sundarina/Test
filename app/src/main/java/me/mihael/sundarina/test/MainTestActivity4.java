@@ -57,6 +57,7 @@ public class MainTestActivity4 extends AppCompatActivity {
 
     }
 
+    //cоздаем меню
 
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -64,11 +65,14 @@ public class MainTestActivity4 extends AppCompatActivity {
         return true;
     }
 
+    //кнопка перехода назад (установлено в xml)
+
     public void menuClick(MenuItem item) {
         Intent scr1 = new Intent(this, MainTestActivity.class);
         startActivity(scr1);
     }
 
+    //кнопка сетингс (установлено в xml)
     public void onSettingsMenuClick(MenuItem item) {
         Toast toast = Toast.makeText(getApplicationContext(),
                 "Клац",
@@ -76,6 +80,7 @@ public class MainTestActivity4 extends AppCompatActivity {
         toast.show();
     }
 
+    //обработка выбора в меню опций сверху
     public boolean onOptionsItemSelected(MenuItem item) {
         //  Log.d("BTN", "Button clicked");
         // получим идентификатор выбранного пункта меню
@@ -95,6 +100,12 @@ public class MainTestActivity4 extends AppCompatActivity {
                         Toast.LENGTH_SHORT);
                 toast2.show();
                 return true;
+            case R.id.action_cat3:
+                Toast toast3 = Toast.makeText(getApplicationContext(),
+                        "Клац3",
+                        Toast.LENGTH_SHORT);
+                toast3.show();
+                return true;
             case R.id.action_favorite:
                 Intent scr3 = new Intent(this, MainTestActivity3.class);
                 startActivity(scr3);
@@ -106,6 +117,8 @@ public class MainTestActivity4 extends AppCompatActivity {
 
 
     // Button button  = (Button) findViewById(R.id.button);
+
+    //создаем строку контекстных действий
 
     ActionMode mActionMode;
 
@@ -163,6 +176,7 @@ public class MainTestActivity4 extends AppCompatActivity {
             }
         };
 
+    //вызываем строку контекстных действий при нажатии
     public void onClick(View v) {
         if (mActionMode == null)
             mActionMode = startActionMode(mActionModeCallback);
