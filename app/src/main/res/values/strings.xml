@@ -10,6 +10,7 @@
     <string name="open">open</string>
     <string name="edit">Edit</string>
     <string name="delete">Delete</string>
+    <string name="click_me">Long Click Me</string>
     <string-array name="avengers_Name">
         <item>Кеп</item>
         <item>Железный человек</item>
@@ -23,5 +24,20 @@
         <item>Зимний солдат</item>
         <item>Железный патриот</item>
         <item>Черная пантера</item>
+    </string-array>
+
+    <string-array name="color">
+        <item>Olive</item>
+        <item>Yellow</item>
+        <item>Olivedrab</item>
+        <item>Yellowgreen</item>
+        <item>Darkolivegreen</item>
+        <item>GreenYellow</item>
+        <item>Lawngreen</item>
+        <item>Chartreuse</item>
+        <item>Lime</item>
+        <item>Limegreen</item>
+        <item>Forestgreen</item>
+        <item>Darkgreen</item>
     </string-array>
 </resources>

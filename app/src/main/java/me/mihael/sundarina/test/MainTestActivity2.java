@@ -49,7 +49,8 @@ public class MainTestActivity2 extends AppCompatActivity {
                  infoTextView.setText("Вы еще не сьели котёнка!");
                 return true;
             case R.id.action_favorite:
-                infoTextView.setText("!!!");
+                Intent scr1 = new Intent(this, MainTestActivity.class);
+                startActivity(scr1);
             return true;
             default:
                 return super.onOptionsItemSelected(item);

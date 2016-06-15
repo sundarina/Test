@@ -35,17 +35,9 @@
 
     <item
         android:id="@+id/action_favorite"
-        android:icon="@drawable/ic_eatme"
+        android:icon="@drawable/ic_back"
         android:title="@string/action_favorite"
         app:showAsAction="ifRoom">
-
-    <menu>
-
-        <item android:id="@+id/create_new"
-            android:title="@string/create_new" />
-        <item android:id="@+id/open"
-            android:title="@string/open" />
-    </menu>
 
     </item>
 

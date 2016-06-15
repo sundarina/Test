@@ -85,8 +85,8 @@ public class MainTestActivity3 extends AppCompatActivity {
                 infoTextView.setText("Вы еще не сьели котёнка!");
                 return true;
             case R.id.action_favorite:
-                infoTextView.setText("!!!");
-                return true;
+                Intent scr2 = new Intent(this, MainTestActivity2.class);
+                startActivity(scr2);
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -94,8 +94,8 @@ public class MainTestActivity3 extends AppCompatActivity {
 
 
     public void menuClick(MenuItem item) {
-        Intent scr1 = new Intent(this, MainTestActivity.class);
-        startActivity(scr1);
+        Intent scr4 = new Intent(this, MainTestActivity4.class);
+        startActivity(scr4);
     }
 
     public void onCreateContextMenu(ContextMenu menu, View v,

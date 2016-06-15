@@ -7,11 +7,13 @@
         android:id="@+id/edit"
         android:title="Edit"
         android:orderInCategory="100"
-        app:showAsAction="never" />
+        android:icon="@drawable/ic_edit"
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/delete"
         android:title="Delete"
         android:orderInCategory="100"
-        app:showAsAction="never" />
+        android:icon="@drawable/ic_delete"
+        app:showAsAction="ifRoom" />
 </menu>
