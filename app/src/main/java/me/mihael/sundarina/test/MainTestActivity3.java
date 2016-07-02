@@ -50,6 +50,12 @@ public class MainTestActivity3 extends AppCompatActivity {
         //adapter = new ArrayAdapter<>(this,
          //       android.R.layout.simple_list_item_1, avengersName);
 
+        /*  this : объект класса Context, то есть в данном случае текущий объект activity
+            android.R.layout.simple_list_item_1 : файл разметки списка, который фреймворк представляет по умолчанию.
+            Он находится в папке Android SDK по пути platforms/[android-номер_версии]/data/res/layout.
+            Если нас не удовлетворяет стандартная разметка списка, мы можем создать свою и потом в коде изменить id на id нужной нам разметки
+            vengersName2  : массив данных  */
+
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, avengersName2);
         listView.setAdapter(adapter);
     }
@@ -110,7 +116,7 @@ public class MainTestActivity3 extends AppCompatActivity {
 
     public boolean onContextItemSelected(MenuItem item) {
         AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
-        avengersName = getResources().getStringArray(R.array.avengers_Name);
+
         switch (item.getItemId()) {
             case R.id.edit:
                 // editNote(info.id);
