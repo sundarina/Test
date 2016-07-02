@@ -11,6 +11,7 @@
     <string name="edit">Edit</string>
     <string name="delete">Delete</string>
     <string name="click_me">Long Click Me</string>
+    <string name="check">Check some elements"</string>
     <string-array name="avengers_Name">
         <item>Кеп</item>
         <item>Железный человек</item>
