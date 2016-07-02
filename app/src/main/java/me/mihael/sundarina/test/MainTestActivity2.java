@@ -20,7 +20,6 @@ public class MainTestActivity2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // setContentView(R.layout.activity_main_test2);
         setContentView(R.layout.activity_main_test2);
     }
 
@@ -40,13 +39,13 @@ public class MainTestActivity2 extends AppCompatActivity {
         // Операции для выбранного пункта меню
         switch (id) {
             case R.id.action_cat1:
-                infoTextView.setText("Вы еще не сьели кота!");
+                infoTextView.setText("1");
                 return true;
             case R.id.action_cat2:
-                infoTextView.setText("Вы еще не сьели кошку!");
+                infoTextView.setText("2");
                 return true;
             case R.id.action_cat3:
-                 infoTextView.setText("Вы еще не сьели котёнка!");
+                 infoTextView.setText("3");
                 return true;
             case R.id.action_favorite:
                 Intent scr1 = new Intent(this, MainTestActivity.class);
@@ -59,7 +58,7 @@ public class MainTestActivity2 extends AppCompatActivity {
 
     public void onSettingsMenuClick(MenuItem item) {
         Toast toast = Toast.makeText(getApplicationContext(),
-        "Пора уничтожить весь выводок котов!", Toast.LENGTH_SHORT);
+        "Test", Toast.LENGTH_SHORT);
         //toast.setGravity(Gravity.TOP, 0, 0);
         toast.show();
     }
