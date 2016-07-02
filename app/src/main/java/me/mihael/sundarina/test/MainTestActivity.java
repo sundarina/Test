@@ -1,6 +1,7 @@
 package me.mihael.sundarina.test;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -22,6 +23,8 @@ import static me.mihael.sundarina.test.R.drawable.catroll;
 import static me.mihael.sundarina.test.R.drawable.roll;
 
 public class MainTestActivity extends AppCompatActivity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,23 +49,29 @@ public class MainTestActivity extends AppCompatActivity {
 
         TextView infoTextView = (TextView) findViewById(R.id.textView);
 
+
         // Операции для выбранного пункта меню
         switch (id) {
             case R.id.action_cat1:
-                infoTextView.setText("Вы еще не сьели кота!");
+                infoTextView.setText("1");
                 return true;
             case R.id.action_cat2:
-                infoTextView.setText("Вы еще не сьели кошку!");
+                infoTextView.setText("2");
                 return true;
             case R.id.action_cat3:
-               // infoTextView.setText("Вы еще не сьели котёнка!");
+                infoTextView.setText("3");
                 return true;
             case R.id.action_favorite:
+               // MenuItem item1 = menu.findItem(R.id.action_favorite);
+                //item.setVisible(false);
+                item.setEnabled(false);  //неактивная кнопка меню
+
                // infoTextView.setText("!!!");
-                Toast toast1 = Toast.makeText(getApplicationContext(),
-                        "Клац",
-                        Toast.LENGTH_SHORT);
-                toast1.show();
+               // Toast toast1 = Toast.makeText(getApplicationContext(),
+               //         "Клац",
+                //        Toast.LENGTH_SHORT);
+               // toast1.show();
+
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
