@@ -28,6 +28,7 @@ public class CustomAdapter extends ArrayAdapter<String>{
         mSelectedItemsIds = new SparseBooleanArray();
         mContext = context;
         inflater = LayoutInflater.from(mContext); //static from() метод с класса LayoutInflater для получения данных LayoutInflater  из Context
+        this.list = list;
     }
 
     private static class ViewHolder {
