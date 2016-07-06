@@ -1,5 +1,6 @@
 package me.mihael.sundarina.test;
 
+import android.content.Context;
 import android.content.Intent;
 
 import android.support.v7.app.AppCompatActivity;
@@ -17,6 +18,13 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,6 +52,7 @@ public class MainTestActivity4 extends AppCompatActivity {
         listView = (ListView) findViewById(R.id.listView);
 
         registerForContextMenu(listView);
+
 
         // используем адаптер данных
       //  adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, color2);
@@ -157,6 +166,9 @@ public class MainTestActivity4 extends AppCompatActivity {
                         return true;
                     }
 
+
+
+
                     /**
                      * Called when an action mode is about to be exited and destroyed.
                      */
@@ -175,9 +187,14 @@ public class MainTestActivity4 extends AppCompatActivity {
                     }
                 });
                 return false;
+
             }
         });
+
     }
+
+
+    @Override
 
 
 
